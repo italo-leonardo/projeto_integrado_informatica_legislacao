@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Design tokens do Custódia (Tailwind v4: configuração via CSS) */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Tons de tinta / navy usados em botões, textos e logo */
+  --color-ink-900: #243244;
+  --color-ink-800: #2b3a4f;
+  --color-ink-600: #4b5a6e;
+  --color-ink-500: #6b7787;
+  --color-ink-400: #98a2b0;
+
+  /* Superfícies e bordas */
+  --color-surface: #f5f6f8;
+  --color-line: #e4e7ec;
+
+  /* Acentos */
+  --color-brand-600: #2563a8;
+  --color-brand-50: #eaf1fa;
+  --color-ok-600: #2b8a57;
+  --color-warn-600: #c9821a;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-surface font-sans text-ink-900 antialiased;
+  }
+}
